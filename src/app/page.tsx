@@ -9,6 +9,13 @@ import MobileMenu from "@/components/MobileMenu";
 export const metadata = {
   title: 'AGRIMATCH — AI-Powered Agricultural Commerce',
   description: 'AGRIMATCH connects farmers directly with verified businesses through AI-powered agricultural supply discovery, matching and procurement tools.',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'AGRIMATCH — AI-Powered Agricultural Commerce',
     description: 'AGRIMATCH connects farmers directly with verified businesses through AI-powered agricultural supply discovery, matching and procurement tools.',
