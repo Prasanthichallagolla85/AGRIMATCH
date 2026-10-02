@@ -7,7 +7,7 @@ export default function BusinessAI() {
   const [messages, setMessages] = useState([{ role: 'ai', text: 'Welcome to your Procurement Copilot. I can help you find suppliers, analyze market trends, or track your orders.' }]);
   const [input, setInput] = useState('');
   
-  const handleSend = (e) => {
+  const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     if (!input) return;
     setMessages([...messages, { role: 'user', text: input }, { role: 'ai', text: 'I found 3 verified suppliers for Mango in Andhra Pradesh. The top match is Ramesh Kumar with 20 tonnes of Grade A. Would you like me to draft an offer?' }]);

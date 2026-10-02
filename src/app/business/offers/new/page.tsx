@@ -9,7 +9,7 @@ export default function MakeOffer() {
   const router = useRouter();
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
   };

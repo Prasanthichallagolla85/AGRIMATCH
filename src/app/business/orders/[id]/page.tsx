@@ -1,11 +1,12 @@
 import { CheckCircle2, Truck, CreditCard, Box } from "lucide-react";
 import Link from "next/link";
 
-export default function BusinessOrderTracking({ params }: { params: { id: string } }) {
+export default async function BusinessOrderTracking({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   return (
     <div className="max-w-3xl mx-auto pb-20">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Order #{params.id}</h1>
+        <h1 className="text-2xl font-bold">Order #{id}</h1>
         <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold">Active</span>
       </div>
 

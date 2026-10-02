@@ -7,7 +7,7 @@ export default function FarmerAIAssistant() {
   const [messages, setMessages] = useState([{ role: 'ai', text: 'Hello Ramesh. I am AGRIMATCH AI. How can I help you with your 20 tonnes of mangoes today?' }]);
   const [input, setInput] = useState('');
   
-  const handleSend = (e) => {
+  const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     if (!input) return;
     setMessages([...messages, { role: 'user', text: input }, { role: 'ai', text: 'Based on your active listings, ABC Foods has matched your requirement. The current market context for Mango is ₹48-54/kg. Your current offer of ₹51 is within the range.' }]);

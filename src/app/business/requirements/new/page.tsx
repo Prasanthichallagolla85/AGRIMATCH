@@ -38,10 +38,10 @@ export default function CreateRequirement() {
       <h1 className="text-2xl font-bold mb-6">Create Procurement Requirement</h1>
 
       <div className="flex bg-white p-1 rounded-xl mb-6 shadow-sm border border-[var(--color-border-subtle)] w-full max-w-sm">
-        <button onClick={() => setMode('ai')} className={\`flex-1 py-2 text-sm font-medium rounded-lg flex items-center justify-center gap-2 \${mode === 'ai' ? 'bg-blue-50 text-blue-700' : 'text-gray-500'}\`}>
+        <button onClick={() => setMode('ai')} className={`flex-1 py-2 text-sm font-medium rounded-lg flex items-center justify-center gap-2 ${mode === 'ai' ? 'bg-blue-50 text-blue-700' : 'text-gray-500'}`}>
           <Sparkles className="w-4 h-4" /> Use AI
         </button>
-        <button onClick={() => setMode('manual')} className={\`flex-1 py-2 text-sm font-medium rounded-lg flex items-center justify-center gap-2 \${mode === 'manual' ? 'bg-gray-100 text-gray-900' : 'text-gray-500'}\`}>
+        <button onClick={() => setMode('manual')} className={`flex-1 py-2 text-sm font-medium rounded-lg flex items-center justify-center gap-2 ${mode === 'manual' ? 'bg-gray-100 text-gray-900' : 'text-gray-500'}`}>
           <FileText className="w-4 h-4" /> Manual Form
         </button>
       </div>

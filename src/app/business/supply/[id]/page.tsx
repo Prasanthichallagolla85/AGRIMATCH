@@ -3,8 +3,9 @@ import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Sparkles, AlertTriangle, 
 import { LISTINGS, PRODUCTS, SUPPLIERS } from "@/lib/demo-data";
 import { notFound } from "next/navigation";
 
-export default function SupplyDetail({ params }: { params: { id: string } }) {
-  const listing = LISTINGS.find(l => l.id === params.id);
+export default async function SupplyDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const listing = LISTINGS.find(l => l.id === id);
   if (!listing) return notFound();
 
   const product = PRODUCTS.find(p => p.id === listing.productId);

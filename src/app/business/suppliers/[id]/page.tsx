@@ -3,8 +3,9 @@ import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Sparkles, TrendingUp, His
 import { SUPPLIERS, LISTINGS, PRODUCTS, REQUIREMENTS, BUYERS } from "@/lib/demo-data";
 import { notFound } from "next/navigation";
 
-export default function SupplierProfile({ params }: { params: { id: string } }) {
-  const supplier = SUPPLIERS.find(s => s.id === params.id);
+export default async function SupplierProfile({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const supplier = SUPPLIERS.find(s => s.id === id);
   if (!supplier) return notFound();
 
   // Get current produce listings for this supplier
